@@ -368,7 +368,7 @@ open class Task<Progress, Value, Error>: Cancellable, CustomStringConvertible
         self._machine.addProgressTupleHandler(&token, progressClosure)
         
         canceller = C { [weak self] in
-            self?._machine.removeProgressTupleHandler(token)
+//            self?._machine.removeProgressTupleHandler(token)
         }
         
         return self
